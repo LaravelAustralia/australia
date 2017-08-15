@@ -9,10 +9,17 @@ sudo: false
 
 services:
   - redis-server
+  - mysql
+
+cache:
+  directories:
+    - node_modules
+    - vendor
 
 before_script:
   - cp .env.ci .env
   - composer install --dev --prefer-source --no-interaction
+  - mysql -e 'create database homestead_test;'
   - php artisan key:generate
   - php artisan migrate --seed
 
