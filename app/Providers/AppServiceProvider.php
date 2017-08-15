@@ -15,10 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-         // Enable mariadb  work On before Version of Laravel 5.7
-         Schema::defaultStringLength(191);
+        // Enable mariadb  work On before Version of Laravel 5.7
+        Schema::defaultStringLength(191);
 
-         Horizon::auth(function ($request) {
+        Horizon::auth(function ($request) {
             return true;
         });
     }
