@@ -179,6 +179,8 @@ return [
 
         //Slack Service Provider
         Vluzrmos\SlackApi\SlackApiServiceProvider::class,
+
+        Laravel\Horizon\HorizonServiceProvider::class,
     ],
 
     /*

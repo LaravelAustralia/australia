@@ -13,7 +13,7 @@
                            @if(isset($invitedMessage))
                               <div class="bg-success">
                                     <br/>
-                                     <p class="bg-success" style="padding-left:10px">     {{ $invitedMessage }}</p>
+                                     <p class="bg-success" style="padding-left:10px">{{ $invitedMessage }}</p>
                                     <br/>
                               </div>
                            @else
@@ -35,9 +35,9 @@
                                 <div class="form-group">
 
                                 </div>
-
                                 <button type="submit" class="btn btn-primary">Send me an invite</button>
                             </form>
+                            <br/>
                             @include('errors.validation')
                             @endif
                         </div>

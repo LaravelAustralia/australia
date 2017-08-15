@@ -53,5 +53,9 @@ class UserHasRequestInvite implements ShouldQueue
             'last_name'  => $this->lastName,
         ]);
 
+       if(!$result->ok){
+            throw new \exception("unable to send invite due to ".$result->error);
+       }
+
     }
 }
