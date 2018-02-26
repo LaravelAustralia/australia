@@ -46,7 +46,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 6vw;
             }
 
             .links > a {
@@ -64,26 +64,32 @@
             }
 
         </style>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-
-            @include('layouts.navigation');
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel Australia
-                </div>
-            </div>
+        <div id="app">
+           <main-view> </main-view>
         </div>
+
     </body>
     <style type="text/css">
-         body {
+         body .flex-center{
                 background-image: url("/images/Australian-map.png") ;
-                background-size: 700px 600px;
+                /*background-size: 700px 600px;*/
+                background-size:contain;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-position: center;
+               /* -webkit-background-size:cover;
+                -moz-background-size:cover;
+                -o-background-size:cover;*/
+               /* background-size:cover;*/
+                background-position:center;
             }
     </style>
+    <footer>
+        <script src="/js/manifest.js"></script>
+        <script src="/js/vendor.js"></script>
+        <script src="/js/app.js"></script>
+    </footer>
 </html>

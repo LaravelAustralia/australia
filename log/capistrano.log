@@ -1,0 +1,475 @@
+# Logfile created on 2018-02-19 01:24:21 +1100 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-19 01:24:21 +1100 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7d8439ab] Running /usr/bin/env mkdir -p /tmp as forge@159.65.138.93
+ DEBUG [7d8439ab] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-19 01:25:41 +1100 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [43104518] Running /usr/bin/env mkdir -p /tmp as forge@159.65.138.93
+ DEBUG [43104518] Command: /usr/bin/env mkdir -p /tmp
+  INFO [43104518] Finished in 2.483 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-laravel54-staging-korajayaram.sh 0.0%
+  INFO Uploading /tmp/git-ssh-laravel54-staging-korajayaram.sh 100.0%
+  INFO [14b8eb2e] Running /usr/bin/env chmod 700 /tmp/git-ssh-laravel54-staging-korajayaram.sh as forge@159.65.138.93
+ DEBUG [14b8eb2e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-laravel54-staging-korajayaram.sh
+  INFO [14b8eb2e] Finished in 0.834 seconds with exit status 0 (successful).
+  INFO [d0131100] Running /usr/bin/env git ls-remote git@github.com:LaravelAustralia/australia.git HEAD as forge@159.65.138.93
+ DEBUG [d0131100] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git ls-remote git@github.com:LaravelAustralia/australia.git HEAD )
+ DEBUG [d0131100] 	Warning: Permanently added the RSA host key for IP address '192.30.255.112' to the list of known hosts.
+ DEBUG [d0131100] 	c2c821595f06f2fb94c3af284cdd2d2c8f787dd4	HEAD
+  INFO [d0131100] Finished in 3.097 seconds with exit status 0 (successful).
+  INFO [88bafeb0] Running /usr/bin/env mkdir -p /home/forge/capistrano/shared /home/forge/capistrano/releases as forge@159.65.138.93
+ DEBUG [88bafeb0] Command: /usr/bin/env mkdir -p /home/forge/capistrano/shared /home/forge/capistrano/releases
+  INFO [88bafeb0] Finished in 1.083 seconds with exit status 0 (successful).
+  INFO [35b49764] Running /usr/bin/env mkdir -p /home/forge/capistrano/shared/storage/app /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/shared/storage/logs as forge@159.65.138.93
+ DEBUG [35b49764] Command: /usr/bin/env mkdir -p /home/forge/capistrano/shared/storage/app /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/shared/storage/logs
+  INFO [35b49764] Finished in 0.416 seconds with exit status 0 (successful).
+ DEBUG [a564ac0a] Running [ -f /home/forge/capistrano/current/REVISION ] as forge@159.65.138.93
+ DEBUG [a564ac0a] Command: [ -f /home/forge/capistrano/current/REVISION ]
+ DEBUG [a564ac0a] Finished in 0.766 seconds with exit status 1 (failed).
+ DEBUG [19c9e680] Running [ -f /home/forge/capistrano/repo/HEAD ] as forge@159.65.138.93
+ DEBUG [19c9e680] Command: [ -f /home/forge/capistrano/repo/HEAD ]
+ DEBUG [19c9e680] Finished in 0.966 seconds with exit status 1 (failed).
+ DEBUG [511fa69a] Running if test ! -d /home/forge/capistrano; then echo "Directory does not exist '/home/forge/capistrano'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [511fa69a] Command: if test ! -d /home/forge/capistrano; then echo "Directory does not exist '/home/forge/capistrano'" 1>&2; false; fi
+ DEBUG [511fa69a] Finished in 0.816 seconds with exit status 0 (successful).
+  INFO [28781dff] Running /usr/bin/env git clone --mirror git@github.com:LaravelAustralia/australia.git /home/forge/capistrano/repo as forge@159.65.138.93
+ DEBUG [28781dff] Command: cd /home/forge/capistrano && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git clone --mirror git@github.com:LaravelAustralia/australia.git /home/forge/capistrano/repo )
+ DEBUG [28781dff] 	Cloning into bare repository '/home/forge/capistrano/repo'...
+  INFO [28781dff] Finished in 5.152 seconds with exit status 0 (successful).
+ DEBUG [ca6031bc] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [ca6031bc] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [ca6031bc] Finished in 0.514 seconds with exit status 0 (successful).
+  INFO [a7095f60] Running /usr/bin/env git remote set-url origin git@github.com:LaravelAustralia/australia.git as forge@159.65.138.93
+ DEBUG [a7095f60] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git remote set-url origin git@github.com:LaravelAustralia/australia.git )
+  INFO [a7095f60] Finished in 0.727 seconds with exit status 0 (successful).
+  INFO [8509c8e9] Running /usr/bin/env git remote update --prune as forge@159.65.138.93
+ DEBUG [8509c8e9] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8509c8e9] 	Fetching origin
+  INFO [8509c8e9] Finished in 3.103 seconds with exit status 0 (successful).
+ DEBUG [ab1dee64] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [ab1dee64] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [ab1dee64] Finished in 0.705 seconds with exit status 0 (successful).
+  INFO [310b445a] Running /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180218142551 as forge@159.65.138.93
+ DEBUG [310b445a] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180218142551 )
+  INFO [310b445a] Finished in 0.751 seconds with exit status 0 (successful).
+  INFO [5bcfdf89] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/forge/capistrano/releases/20180218142551 as forge@159.65.138.93
+ DEBUG [5bcfdf89] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/forge/capistrano/releases/20180218142551 )
+  INFO [5bcfdf89] Finished in 0.664 seconds with exit status 0 (successful).
+ DEBUG [587c58f0] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [587c58f0] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [587c58f0] Finished in 1.283 seconds with exit status 0 (successful).
+ DEBUG [e68605bd] Running /usr/bin/env git rev-list --max-count=1 master as forge@159.65.138.93
+ DEBUG [e68605bd] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e68605bd] 	c2c821595f06f2fb94c3af284cdd2d2c8f787dd4
+ DEBUG [e68605bd] Finished in 0.576 seconds with exit status 0 (successful).
+ DEBUG [33b235e2] Running if test ! -d /home/forge/capistrano/releases/20180218142551; then echo "Directory does not exist '/home/forge/capistrano/releases/20180218142551'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [33b235e2] Command: if test ! -d /home/forge/capistrano/releases/20180218142551; then echo "Directory does not exist '/home/forge/capistrano/releases/20180218142551'" 1>&2; false; fi
+ DEBUG [33b235e2] Finished in 0.753 seconds with exit status 0 (successful).
+  INFO [61ed68aa] Running /usr/bin/env echo "c2c821595f06f2fb94c3af284cdd2d2c8f787dd4" >> REVISION as forge@159.65.138.93
+ DEBUG [61ed68aa] Command: cd /home/forge/capistrano/releases/20180218142551 && /usr/bin/env echo "c2c821595f06f2fb94c3af284cdd2d2c8f787dd4" >> REVISION
+  INFO [61ed68aa] Finished in 0.522 seconds with exit status 0 (successful).
+  INFO [de885487] Running /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180218142551/storage /home/forge/capistrano/releases/20180218142551/storage/framework as forge@159.65.138.93
+ DEBUG [de885487] Command: /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180218142551/storage /home/forge/capistrano/releases/20180218142551/storage/framework
+  INFO [de885487] Finished in 0.665 seconds with exit status 0 (successful).
+ DEBUG [6851d543] Running [ -L /home/forge/capistrano/releases/20180218142551/storage/app ] as forge@159.65.138.93
+ DEBUG [6851d543] Command: [ -L /home/forge/capistrano/releases/20180218142551/storage/app ]
+ DEBUG [6851d543] Finished in 0.649 seconds with exit status 1 (failed).
+ DEBUG [4f0276ee] Running [ -d /home/forge/capistrano/releases/20180218142551/storage/app ] as forge@159.65.138.93
+ DEBUG [4f0276ee] Command: [ -d /home/forge/capistrano/releases/20180218142551/storage/app ]
+ DEBUG [4f0276ee] Finished in 0.818 seconds with exit status 0 (successful).
+  INFO [e91f4341] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/app as forge@159.65.138.93
+ DEBUG [e91f4341] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/app
+  INFO [e91f4341] Finished in 0.619 seconds with exit status 0 (successful).
+  INFO [a70ef812] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/app /home/forge/capistrano/releases/20180218142551/storage/app as forge@159.65.138.93
+ DEBUG [a70ef812] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/app /home/forge/capistrano/releases/20180218142551/storage/app
+  INFO [a70ef812] Finished in 0.704 seconds with exit status 0 (successful).
+ DEBUG [4f0882bb] Running [ -L /home/forge/capistrano/releases/20180218142551/storage/framework/cache ] as forge@159.65.138.93
+ DEBUG [4f0882bb] Command: [ -L /home/forge/capistrano/releases/20180218142551/storage/framework/cache ]
+ DEBUG [4f0882bb] Finished in 0.583 seconds with exit status 1 (failed).
+ DEBUG [228b73e8] Running [ -d /home/forge/capistrano/releases/20180218142551/storage/framework/cache ] as forge@159.65.138.93
+ DEBUG [228b73e8] Command: [ -d /home/forge/capistrano/releases/20180218142551/storage/framework/cache ]
+ DEBUG [228b73e8] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO [0cea6112] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/framework/cache as forge@159.65.138.93
+ DEBUG [0cea6112] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/framework/cache
+  INFO [0cea6112] Finished in 0.867 seconds with exit status 0 (successful).
+  INFO [e136da38] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/releases/20180218142551/storage/framework/cache as forge@159.65.138.93
+ DEBUG [e136da38] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/releases/20180218142551/storage/framework/cache
+  INFO [e136da38] Finished in 0.565 seconds with exit status 0 (successful).
+ DEBUG [78e31dc5] Running [ -L /home/forge/capistrano/releases/20180218142551/storage/framework/sessions ] as forge@159.65.138.93
+ DEBUG [78e31dc5] Command: [ -L /home/forge/capistrano/releases/20180218142551/storage/framework/sessions ]
+ DEBUG [78e31dc5] Finished in 0.684 seconds with exit status 1 (failed).
+ DEBUG [a339e2cc] Running [ -d /home/forge/capistrano/releases/20180218142551/storage/framework/sessions ] as forge@159.65.138.93
+ DEBUG [a339e2cc] Command: [ -d /home/forge/capistrano/releases/20180218142551/storage/framework/sessions ]
+ DEBUG [a339e2cc] Finished in 0.944 seconds with exit status 0 (successful).
+  INFO [bb63cf92] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/framework/sessions as forge@159.65.138.93
+ DEBUG [bb63cf92] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/framework/sessions
+  INFO [bb63cf92] Finished in 0.617 seconds with exit status 0 (successful).
+  INFO [19d346a5] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/releases/20180218142551/storage/framework/sessions as forge@159.65.138.93
+ DEBUG [19d346a5] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/releases/20180218142551/storage/framework/sessions
+  INFO [19d346a5] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG [5ff5d39f] Running [ -L /home/forge/capistrano/releases/20180218142551/storage/framework/views ] as forge@159.65.138.93
+ DEBUG [5ff5d39f] Command: [ -L /home/forge/capistrano/releases/20180218142551/storage/framework/views ]
+ DEBUG [5ff5d39f] Finished in 0.554 seconds with exit status 1 (failed).
+ DEBUG [d81a7d9c] Running [ -d /home/forge/capistrano/releases/20180218142551/storage/framework/views ] as forge@159.65.138.93
+ DEBUG [d81a7d9c] Command: [ -d /home/forge/capistrano/releases/20180218142551/storage/framework/views ]
+ DEBUG [d81a7d9c] Finished in 0.719 seconds with exit status 0 (successful).
+  INFO [46d10f03] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/framework/views as forge@159.65.138.93
+ DEBUG [46d10f03] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/framework/views
+  INFO [46d10f03] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [f666df00] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/releases/20180218142551/storage/framework/views as forge@159.65.138.93
+ DEBUG [f666df00] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/releases/20180218142551/storage/framework/views
+  INFO [f666df00] Finished in 0.664 seconds with exit status 0 (successful).
+ DEBUG [80d984ff] Running [ -L /home/forge/capistrano/releases/20180218142551/storage/logs ] as forge@159.65.138.93
+ DEBUG [80d984ff] Command: [ -L /home/forge/capistrano/releases/20180218142551/storage/logs ]
+ DEBUG [80d984ff] Finished in 0.900 seconds with exit status 1 (failed).
+ DEBUG [654da47e] Running [ -d /home/forge/capistrano/releases/20180218142551/storage/logs ] as forge@159.65.138.93
+ DEBUG [654da47e] Command: [ -d /home/forge/capistrano/releases/20180218142551/storage/logs ]
+ DEBUG [654da47e] Finished in 0.472 seconds with exit status 0 (successful).
+  INFO [d309c74e] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/logs as forge@159.65.138.93
+ DEBUG [d309c74e] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180218142551/storage/logs
+  INFO [d309c74e] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [4778584d] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/logs /home/forge/capistrano/releases/20180218142551/storage/logs as forge@159.65.138.93
+ DEBUG [4778584d] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/logs /home/forge/capistrano/releases/20180218142551/storage/logs
+  INFO [4778584d] Finished in 0.627 seconds with exit status 0 (successful).
+ DEBUG [4ea1817c] Running if test ! -d /home/forge/capistrano/releases/20180218142551; then echo "Directory does not exist '/home/forge/capistrano/releases/20180218142551'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [4ea1817c] Command: if test ! -d /home/forge/capistrano/releases/20180218142551; then echo "Directory does not exist '/home/forge/capistrano/releases/20180218142551'" 1>&2; false; fi
+ DEBUG [4ea1817c] Finished in 0.806 seconds with exit status 0 (successful).
+  INFO [e1f45266] Running /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader as forge@159.65.138.93
+ DEBUG [e1f45266] Command: cd /home/forge/capistrano/releases/20180218142551 && /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader
+  INFO [e1f45266] Finished in 6.145 seconds with exit status 0 (successful).
+  INFO [13dfbd73] Running /usr/bin/env chmod -R ug+rwx /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180218142551/bootstrap/cache/ as forge@159.65.138.93
+ DEBUG [13dfbd73] Command: /usr/bin/env chmod -R ug+rwx /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180218142551/bootstrap/cache/
+  INFO [13dfbd73] Finished in 1.019 seconds with exit status 0 (successful).
+  INFO [40f78b82] Running /usr/bin/env chgrp -R www-data /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180218142551/bootstrap/cache/ as forge@159.65.138.93
+ DEBUG [40f78b82] Command: /usr/bin/env chgrp -R www-data /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180218142551/bootstrap/cache/
+  INFO [40f78b82] Finished in 0.678 seconds with exit status 0 (successful).
+  INFO [78195212] Running /usr/bin/env ln -s /home/forge/capistrano/releases/20180218142551 /home/forge/capistrano/releases/current as forge@159.65.138.93
+ DEBUG [78195212] Command: /usr/bin/env ln -s /home/forge/capistrano/releases/20180218142551 /home/forge/capistrano/releases/current
+  INFO [78195212] Finished in 0.652 seconds with exit status 0 (successful).
+  INFO [25cfdcff] Running /usr/bin/env mv /home/forge/capistrano/releases/current /home/forge/capistrano as forge@159.65.138.93
+ DEBUG [25cfdcff] Command: /usr/bin/env mv /home/forge/capistrano/releases/current /home/forge/capistrano
+  INFO [25cfdcff] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [c72f6963] Running /usr/bin/env ls -x /home/forge/capistrano/releases as forge@159.65.138.93
+ DEBUG [c72f6963] Command: /usr/bin/env ls -x /home/forge/capistrano/releases
+ DEBUG [c72f6963] 	20180218142551
+ DEBUG [c72f6963] Finished in 0.677 seconds with exit status 0 (successful).
+ DEBUG [4c1c45fb] Running if test ! -d /home/forge/capistrano/releases; then echo "Directory does not exist '/home/forge/capistrano/releases'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [4c1c45fb] Command: if test ! -d /home/forge/capistrano/releases; then echo "Directory does not exist '/home/forge/capistrano/releases'" 1>&2; false; fi
+ DEBUG [4c1c45fb] Finished in 0.753 seconds with exit status 0 (successful).
+  INFO [73f5a4bb] Running /usr/bin/env echo "Branch master (at c2c821595f06f2fb94c3af284cdd2d2c8f787dd4) deployed as release 20180218142551 by korajayaram" >> /home/forge/capistrano/revisions.log as forge@159.65.138.93
+ DEBUG [73f5a4bb] Command: cd /home/forge/capistrano/releases && /usr/bin/env echo "Branch master (at c2c821595f06f2fb94c3af284cdd2d2c8f787dd4) deployed as release 20180218142551 by korajayaram" >> /home/forge/capistrano/revisions.log
+  INFO [73f5a4bb] Finished in 0.571 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-19 13:46:41 +1100 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e4f7144e] Running /usr/bin/env mkdir -p /tmp as forge@159.65.138.93
+ DEBUG [e4f7144e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e4f7144e] Finished in 2.719 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-laravel54-staging-korajayaram.sh 0.0%
+  INFO Uploading /tmp/git-ssh-laravel54-staging-korajayaram.sh 100.0%
+  INFO [c88daa4a] Running /usr/bin/env chmod 700 /tmp/git-ssh-laravel54-staging-korajayaram.sh as forge@159.65.138.93
+ DEBUG [c88daa4a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-laravel54-staging-korajayaram.sh
+  INFO [c88daa4a] Finished in 0.497 seconds with exit status 0 (successful).
+  INFO [92da1b4f] Running /usr/bin/env git ls-remote git@github.com:LaravelAustralia/australia.git HEAD as forge@159.65.138.93
+ DEBUG [92da1b4f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git ls-remote git@github.com:LaravelAustralia/australia.git HEAD )
+ DEBUG [92da1b4f] 	Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+ DEBUG [92da1b4f] 	c2c821595f06f2fb94c3af284cdd2d2c8f787dd4	HEAD
+  INFO [92da1b4f] Finished in 3.608 seconds with exit status 0 (successful).
+  INFO [542cecf9] Running /usr/bin/env mkdir -p /home/forge/capistrano/shared /home/forge/capistrano/releases as forge@159.65.138.93
+ DEBUG [542cecf9] Command: /usr/bin/env mkdir -p /home/forge/capistrano/shared /home/forge/capistrano/releases
+  INFO [542cecf9] Finished in 0.696 seconds with exit status 0 (successful).
+  INFO [d5948bf5] Running /usr/bin/env mkdir -p /home/forge/capistrano/shared/storage/app /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/shared/storage/logs as forge@159.65.138.93
+ DEBUG [d5948bf5] Command: /usr/bin/env mkdir -p /home/forge/capistrano/shared/storage/app /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/shared/storage/logs
+  INFO [d5948bf5] Finished in 0.584 seconds with exit status 0 (successful).
+ DEBUG [caa99e15] Running [ -f /home/forge/capistrano/current/REVISION ] as forge@159.65.138.93
+ DEBUG [caa99e15] Command: [ -f /home/forge/capistrano/current/REVISION ]
+ DEBUG [caa99e15] Finished in 0.507 seconds with exit status 0 (successful).
+ DEBUG [558ab469] Running /usr/bin/env cat /home/forge/capistrano/current/REVISION 2>/dev/null as forge@159.65.138.93
+ DEBUG [558ab469] Command: /usr/bin/env cat /home/forge/capistrano/current/REVISION 2>/dev/null
+ DEBUG [558ab469] 	c2c821595f06f2fb94c3af284cdd2d2c8f787dd4
+ DEBUG [558ab469] Finished in 0.772 seconds with exit status 0 (successful).
+ DEBUG [2a0ab82a] Running [ -f /home/forge/capistrano/repo/HEAD ] as forge@159.65.138.93
+ DEBUG [2a0ab82a] Command: [ -f /home/forge/capistrano/repo/HEAD ]
+ DEBUG [2a0ab82a] Finished in 0.519 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/forge/capistrano/repo
+ DEBUG [6a855afd] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [6a855afd] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [6a855afd] Finished in 0.505 seconds with exit status 0 (successful).
+  INFO [ec61c771] Running /usr/bin/env git remote set-url origin git@github.com:LaravelAustralia/australia.git as forge@159.65.138.93
+ DEBUG [ec61c771] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git remote set-url origin git@github.com:LaravelAustralia/australia.git )
+  INFO [ec61c771] Finished in 0.515 seconds with exit status 0 (successful).
+  INFO [6eeb523e] Running /usr/bin/env git remote update --prune as forge@159.65.138.93
+ DEBUG [6eeb523e] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6eeb523e] 	Fetching origin
+  INFO [6eeb523e] Finished in 3.475 seconds with exit status 0 (successful).
+ DEBUG [84431a32] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [84431a32] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [84431a32] Finished in 0.498 seconds with exit status 0 (successful).
+  INFO [ea53c1bc] Running /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180219024652 as forge@159.65.138.93
+ DEBUG [ea53c1bc] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180219024652 )
+  INFO [ea53c1bc] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [07188cee] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/forge/capistrano/releases/20180219024652 as forge@159.65.138.93
+ DEBUG [07188cee] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/forge/capistrano/releases/20180219024652 )
+  INFO [07188cee] Finished in 0.839 seconds with exit status 0 (successful).
+ DEBUG [718b8c6a] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [718b8c6a] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [718b8c6a] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [2ed34da7] Running /usr/bin/env git rev-list --max-count=1 master as forge@159.65.138.93
+ DEBUG [2ed34da7] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [2ed34da7] 	c2c821595f06f2fb94c3af284cdd2d2c8f787dd4
+ DEBUG [2ed34da7] Finished in 0.590 seconds with exit status 0 (successful).
+ DEBUG [6bc66dd4] Running if test ! -d /home/forge/capistrano/releases/20180219024652; then echo "Directory does not exist '/home/forge/capistrano/releases/20180219024652'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [6bc66dd4] Command: if test ! -d /home/forge/capistrano/releases/20180219024652; then echo "Directory does not exist '/home/forge/capistrano/releases/20180219024652'" 1>&2; false; fi
+ DEBUG [6bc66dd4] Finished in 0.519 seconds with exit status 0 (successful).
+  INFO [eebd6619] Running /usr/bin/env echo "c2c821595f06f2fb94c3af284cdd2d2c8f787dd4" >> REVISION as forge@159.65.138.93
+ DEBUG [eebd6619] Command: cd /home/forge/capistrano/releases/20180219024652 && /usr/bin/env echo "c2c821595f06f2fb94c3af284cdd2d2c8f787dd4" >> REVISION
+  INFO [eebd6619] Finished in 0.523 seconds with exit status 0 (successful).
+  INFO [17c2288e] Running /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180219024652/storage /home/forge/capistrano/releases/20180219024652/storage/framework as forge@159.65.138.93
+ DEBUG [17c2288e] Command: /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180219024652/storage /home/forge/capistrano/releases/20180219024652/storage/framework
+  INFO [17c2288e] Finished in 0.509 seconds with exit status 0 (successful).
+ DEBUG [c8a5bac1] Running [ -L /home/forge/capistrano/releases/20180219024652/storage/app ] as forge@159.65.138.93
+ DEBUG [c8a5bac1] Command: [ -L /home/forge/capistrano/releases/20180219024652/storage/app ]
+ DEBUG [c8a5bac1] Finished in 0.536 seconds with exit status 1 (failed).
+ DEBUG [65572a1e] Running [ -d /home/forge/capistrano/releases/20180219024652/storage/app ] as forge@159.65.138.93
+ DEBUG [65572a1e] Command: [ -d /home/forge/capistrano/releases/20180219024652/storage/app ]
+ DEBUG [65572a1e] Finished in 0.502 seconds with exit status 0 (successful).
+  INFO [1d6a465e] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/app as forge@159.65.138.93
+ DEBUG [1d6a465e] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/app
+  INFO [1d6a465e] Finished in 0.548 seconds with exit status 0 (successful).
+  INFO [da38a4cc] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/app /home/forge/capistrano/releases/20180219024652/storage/app as forge@159.65.138.93
+ DEBUG [da38a4cc] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/app /home/forge/capistrano/releases/20180219024652/storage/app
+  INFO [da38a4cc] Finished in 0.503 seconds with exit status 0 (successful).
+ DEBUG [316e5488] Running [ -L /home/forge/capistrano/releases/20180219024652/storage/framework/cache ] as forge@159.65.138.93
+ DEBUG [316e5488] Command: [ -L /home/forge/capistrano/releases/20180219024652/storage/framework/cache ]
+ DEBUG [316e5488] Finished in 0.540 seconds with exit status 1 (failed).
+ DEBUG [a71dab37] Running [ -d /home/forge/capistrano/releases/20180219024652/storage/framework/cache ] as forge@159.65.138.93
+ DEBUG [a71dab37] Command: [ -d /home/forge/capistrano/releases/20180219024652/storage/framework/cache ]
+ DEBUG [a71dab37] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO [6f34e792] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/framework/cache as forge@159.65.138.93
+ DEBUG [6f34e792] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/framework/cache
+  INFO [6f34e792] Finished in 0.528 seconds with exit status 0 (successful).
+  INFO [2d033d64] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/releases/20180219024652/storage/framework/cache as forge@159.65.138.93
+ DEBUG [2d033d64] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/releases/20180219024652/storage/framework/cache
+  INFO [2d033d64] Finished in 0.514 seconds with exit status 0 (successful).
+ DEBUG [75baa7dd] Running [ -L /home/forge/capistrano/releases/20180219024652/storage/framework/sessions ] as forge@159.65.138.93
+ DEBUG [75baa7dd] Command: [ -L /home/forge/capistrano/releases/20180219024652/storage/framework/sessions ]
+ DEBUG [75baa7dd] Finished in 0.508 seconds with exit status 1 (failed).
+ DEBUG [3e048027] Running [ -d /home/forge/capistrano/releases/20180219024652/storage/framework/sessions ] as forge@159.65.138.93
+ DEBUG [3e048027] Command: [ -d /home/forge/capistrano/releases/20180219024652/storage/framework/sessions ]
+ DEBUG [3e048027] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [12a1b8c4] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/framework/sessions as forge@159.65.138.93
+ DEBUG [12a1b8c4] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/framework/sessions
+  INFO [12a1b8c4] Finished in 0.549 seconds with exit status 0 (successful).
+  INFO [f4b37d67] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/releases/20180219024652/storage/framework/sessions as forge@159.65.138.93
+ DEBUG [f4b37d67] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/releases/20180219024652/storage/framework/sessions
+  INFO [f4b37d67] Finished in 0.513 seconds with exit status 0 (successful).
+ DEBUG [c14d8e86] Running [ -L /home/forge/capistrano/releases/20180219024652/storage/framework/views ] as forge@159.65.138.93
+ DEBUG [c14d8e86] Command: [ -L /home/forge/capistrano/releases/20180219024652/storage/framework/views ]
+ DEBUG [c14d8e86] Finished in 0.532 seconds with exit status 1 (failed).
+ DEBUG [2658d4d4] Running [ -d /home/forge/capistrano/releases/20180219024652/storage/framework/views ] as forge@159.65.138.93
+ DEBUG [2658d4d4] Command: [ -d /home/forge/capistrano/releases/20180219024652/storage/framework/views ]
+ DEBUG [2658d4d4] Finished in 0.500 seconds with exit status 0 (successful).
+  INFO [8db3c1d9] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/framework/views as forge@159.65.138.93
+ DEBUG [8db3c1d9] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/framework/views
+  INFO [8db3c1d9] Finished in 0.585 seconds with exit status 0 (successful).
+  INFO [147df2b7] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/releases/20180219024652/storage/framework/views as forge@159.65.138.93
+ DEBUG [147df2b7] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/releases/20180219024652/storage/framework/views
+  INFO [147df2b7] Finished in 0.602 seconds with exit status 0 (successful).
+ DEBUG [eac994f0] Running [ -L /home/forge/capistrano/releases/20180219024652/storage/logs ] as forge@159.65.138.93
+ DEBUG [eac994f0] Command: [ -L /home/forge/capistrano/releases/20180219024652/storage/logs ]
+ DEBUG [eac994f0] Finished in 0.553 seconds with exit status 1 (failed).
+ DEBUG [ae2f5715] Running [ -d /home/forge/capistrano/releases/20180219024652/storage/logs ] as forge@159.65.138.93
+ DEBUG [ae2f5715] Command: [ -d /home/forge/capistrano/releases/20180219024652/storage/logs ]
+ DEBUG [ae2f5715] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [da6e1493] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/logs as forge@159.65.138.93
+ DEBUG [da6e1493] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219024652/storage/logs
+  INFO [da6e1493] Finished in 0.524 seconds with exit status 0 (successful).
+  INFO [d4c9f712] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/logs /home/forge/capistrano/releases/20180219024652/storage/logs as forge@159.65.138.93
+ DEBUG [d4c9f712] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/logs /home/forge/capistrano/releases/20180219024652/storage/logs
+  INFO [d4c9f712] Finished in 0.512 seconds with exit status 0 (successful).
+ DEBUG [c0a0f92f] Running if test ! -d /home/forge/capistrano/releases/20180219024652; then echo "Directory does not exist '/home/forge/capistrano/releases/20180219024652'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [c0a0f92f] Command: if test ! -d /home/forge/capistrano/releases/20180219024652; then echo "Directory does not exist '/home/forge/capistrano/releases/20180219024652'" 1>&2; false; fi
+ DEBUG [c0a0f92f] Finished in 0.535 seconds with exit status 0 (successful).
+  INFO [f506e1a6] Running /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader as forge@159.65.138.93
+ DEBUG [f506e1a6] Command: cd /home/forge/capistrano/releases/20180219024652 && /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader
+  INFO [f506e1a6] Finished in 7.107 seconds with exit status 0 (successful).
+  INFO [059fa6c0] Running /usr/bin/env chmod -R ug+rwx /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180219024652/bootstrap/cache/ as forge@159.65.138.93
+ DEBUG [059fa6c0] Command: /usr/bin/env chmod -R ug+rwx /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180219024652/bootstrap/cache/
+  INFO [059fa6c0] Finished in 0.526 seconds with exit status 0 (successful).
+  INFO [d7efcef4] Running /usr/bin/env chgrp -R www-data /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180219024652/bootstrap/cache/ as forge@159.65.138.93
+ DEBUG [d7efcef4] Command: /usr/bin/env chgrp -R www-data /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180219024652/bootstrap/cache/
+  INFO [d7efcef4] Finished in 0.514 seconds with exit status 0 (successful).
+  INFO [4d983620] Running /usr/bin/env ln -s /home/forge/capistrano/releases/20180219024652 /home/forge/capistrano/releases/current as forge@159.65.138.93
+ DEBUG [4d983620] Command: /usr/bin/env ln -s /home/forge/capistrano/releases/20180219024652 /home/forge/capistrano/releases/current
+  INFO [4d983620] Finished in 0.507 seconds with exit status 0 (successful).
+  INFO [46424ccd] Running /usr/bin/env mv /home/forge/capistrano/releases/current /home/forge/capistrano as forge@159.65.138.93
+ DEBUG [46424ccd] Command: /usr/bin/env mv /home/forge/capistrano/releases/current /home/forge/capistrano
+  INFO [46424ccd] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [2857b115] Running /usr/bin/env ls -x /home/forge/capistrano/releases as forge@159.65.138.93
+ DEBUG [2857b115] Command: /usr/bin/env ls -x /home/forge/capistrano/releases
+ DEBUG [2857b115] 	20180218142551	20180219024652
+ DEBUG [2857b115] Finished in 0.513 seconds with exit status 0 (successful).
+ DEBUG [255ab42f] Running if test ! -d /home/forge/capistrano/releases; then echo "Directory does not exist '/home/forge/capistrano/releases'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [255ab42f] Command: if test ! -d /home/forge/capistrano/releases; then echo "Directory does not exist '/home/forge/capistrano/releases'" 1>&2; false; fi
+ DEBUG [255ab42f] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [28fcc9c9] Running /usr/bin/env echo "Branch master (at c2c821595f06f2fb94c3af284cdd2d2c8f787dd4) deployed as release 20180219024652 by korajayaram" >> /home/forge/capistrano/revisions.log as forge@159.65.138.93
+ DEBUG [28fcc9c9] Command: cd /home/forge/capistrano/releases && /usr/bin/env echo "Branch master (at c2c821595f06f2fb94c3af284cdd2d2c8f787dd4) deployed as release 20180219024652 by korajayaram" >> /home/forge/capistrano/revisions.log
+  INFO [28fcc9c9] Finished in 0.510 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-19 14:05:54 +1100 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [51bc999a] Running /usr/bin/env mkdir -p /tmp as forge@159.65.138.93
+ DEBUG [51bc999a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [51bc999a] Finished in 4.030 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-laravel54-staging-korajayaram.sh 0.0%
+  INFO Uploading /tmp/git-ssh-laravel54-staging-korajayaram.sh 100.0%
+  INFO [4d0dd7f4] Running /usr/bin/env chmod 700 /tmp/git-ssh-laravel54-staging-korajayaram.sh as forge@159.65.138.93
+ DEBUG [4d0dd7f4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-laravel54-staging-korajayaram.sh
+  INFO [4d0dd7f4] Finished in 0.925 seconds with exit status 0 (successful).
+  INFO [905059e6] Running /usr/bin/env git ls-remote git@github.com:LaravelAustralia/australia.git HEAD as forge@159.65.138.93
+ DEBUG [905059e6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git ls-remote git@github.com:LaravelAustralia/australia.git HEAD )
+ DEBUG [905059e6] 	c2c821595f06f2fb94c3af284cdd2d2c8f787dd4	HEAD
+  INFO [905059e6] Finished in 3.374 seconds with exit status 0 (successful).
+  INFO [932e8acb] Running /usr/bin/env mkdir -p /home/forge/capistrano/shared /home/forge/capistrano/releases as forge@159.65.138.93
+ DEBUG [932e8acb] Command: /usr/bin/env mkdir -p /home/forge/capistrano/shared /home/forge/capistrano/releases
+  INFO [932e8acb] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [af94c936] Running /usr/bin/env mkdir -p /home/forge/capistrano/shared/storage/app /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/shared/storage/logs as forge@159.65.138.93
+ DEBUG [af94c936] Command: /usr/bin/env mkdir -p /home/forge/capistrano/shared/storage/app /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/shared/storage/logs
+  INFO [af94c936] Finished in 0.774 seconds with exit status 0 (successful).
+ DEBUG [b8e8e677] Running [ -f /home/forge/capistrano/current/REVISION ] as forge@159.65.138.93
+ DEBUG [b8e8e677] Command: [ -f /home/forge/capistrano/current/REVISION ]
+ DEBUG [b8e8e677] Finished in 0.970 seconds with exit status 0 (successful).
+ DEBUG [ee7c8b6c] Running /usr/bin/env cat /home/forge/capistrano/current/REVISION 2>/dev/null as forge@159.65.138.93
+ DEBUG [ee7c8b6c] Command: /usr/bin/env cat /home/forge/capistrano/current/REVISION 2>/dev/null
+ DEBUG [ee7c8b6c] 	c2c821595f06f2fb94c3af284cdd2d2c8f787dd4
+ DEBUG [ee7c8b6c] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [e4951135] Running [ -f /home/forge/capistrano/repo/HEAD ] as forge@159.65.138.93
+ DEBUG [e4951135] Command: [ -f /home/forge/capistrano/repo/HEAD ]
+ DEBUG [e4951135] Finished in 1.107 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/forge/capistrano/repo
+ DEBUG [74dd25bf] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [74dd25bf] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [74dd25bf] Finished in 0.923 seconds with exit status 0 (successful).
+  INFO [4c7a4b95] Running /usr/bin/env git remote set-url origin git@github.com:LaravelAustralia/australia.git as forge@159.65.138.93
+ DEBUG [4c7a4b95] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git remote set-url origin git@github.com:LaravelAustralia/australia.git )
+  INFO [4c7a4b95] Finished in 0.812 seconds with exit status 0 (successful).
+  INFO [b16ad9a3] Running /usr/bin/env git remote update --prune as forge@159.65.138.93
+ DEBUG [b16ad9a3] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b16ad9a3] 	Fetching origin
+  INFO [b16ad9a3] Finished in 3.485 seconds with exit status 0 (successful).
+ DEBUG [615b06b7] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [615b06b7] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [615b06b7] Finished in 0.772 seconds with exit status 0 (successful).
+  INFO [61440ab5] Running /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180219030608 as forge@159.65.138.93
+ DEBUG [61440ab5] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180219030608 )
+  INFO [61440ab5] Finished in 0.763 seconds with exit status 0 (successful).
+  INFO [bef6aa00] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/forge/capistrano/releases/20180219030608 as forge@159.65.138.93
+ DEBUG [bef6aa00] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/forge/capistrano/releases/20180219030608 )
+  INFO [bef6aa00] Finished in 1.228 seconds with exit status 0 (successful).
+ DEBUG [9a921c57] Running if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [9a921c57] Command: if test ! -d /home/forge/capistrano/repo; then echo "Directory does not exist '/home/forge/capistrano/repo'" 1>&2; false; fi
+ DEBUG [9a921c57] Finished in 0.614 seconds with exit status 0 (successful).
+ DEBUG [14ac5b33] Running /usr/bin/env git rev-list --max-count=1 master as forge@159.65.138.93
+ DEBUG [14ac5b33] Command: cd /home/forge/capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-laravel54-staging-korajayaram.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [14ac5b33] 	c2c821595f06f2fb94c3af284cdd2d2c8f787dd4
+ DEBUG [14ac5b33] Finished in 0.921 seconds with exit status 0 (successful).
+ DEBUG [85bb7e89] Running if test ! -d /home/forge/capistrano/releases/20180219030608; then echo "Directory does not exist '/home/forge/capistrano/releases/20180219030608'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [85bb7e89] Command: if test ! -d /home/forge/capistrano/releases/20180219030608; then echo "Directory does not exist '/home/forge/capistrano/releases/20180219030608'" 1>&2; false; fi
+ DEBUG [85bb7e89] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [84d7ee2e] Running /usr/bin/env echo "c2c821595f06f2fb94c3af284cdd2d2c8f787dd4" >> REVISION as forge@159.65.138.93
+ DEBUG [84d7ee2e] Command: cd /home/forge/capistrano/releases/20180219030608 && /usr/bin/env echo "c2c821595f06f2fb94c3af284cdd2d2c8f787dd4" >> REVISION
+  INFO [84d7ee2e] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [1f2b2a5b] Running /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180219030608/storage /home/forge/capistrano/releases/20180219030608/storage/framework as forge@159.65.138.93
+ DEBUG [1f2b2a5b] Command: /usr/bin/env mkdir -p /home/forge/capistrano/releases/20180219030608/storage /home/forge/capistrano/releases/20180219030608/storage/framework
+  INFO [1f2b2a5b] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [0e4f65b4] Running [ -L /home/forge/capistrano/releases/20180219030608/storage/app ] as forge@159.65.138.93
+ DEBUG [0e4f65b4] Command: [ -L /home/forge/capistrano/releases/20180219030608/storage/app ]
+ DEBUG [0e4f65b4] Finished in 0.925 seconds with exit status 1 (failed).
+ DEBUG [3b1574b3] Running [ -d /home/forge/capistrano/releases/20180219030608/storage/app ] as forge@159.65.138.93
+ DEBUG [3b1574b3] Command: [ -d /home/forge/capistrano/releases/20180219030608/storage/app ]
+ DEBUG [3b1574b3] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO [97c1ccda] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/app as forge@159.65.138.93
+ DEBUG [97c1ccda] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/app
+  INFO [97c1ccda] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [90ec9bf6] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/app /home/forge/capistrano/releases/20180219030608/storage/app as forge@159.65.138.93
+ DEBUG [90ec9bf6] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/app /home/forge/capistrano/releases/20180219030608/storage/app
+  INFO [90ec9bf6] Finished in 0.808 seconds with exit status 0 (successful).
+ DEBUG [b11650c1] Running [ -L /home/forge/capistrano/releases/20180219030608/storage/framework/cache ] as forge@159.65.138.93
+ DEBUG [b11650c1] Command: [ -L /home/forge/capistrano/releases/20180219030608/storage/framework/cache ]
+ DEBUG [b11650c1] Finished in 1.002 seconds with exit status 1 (failed).
+ DEBUG [0b1b3a64] Running [ -d /home/forge/capistrano/releases/20180219030608/storage/framework/cache ] as forge@159.65.138.93
+ DEBUG [0b1b3a64] Command: [ -d /home/forge/capistrano/releases/20180219030608/storage/framework/cache ]
+ DEBUG [0b1b3a64] Finished in 0.955 seconds with exit status 0 (successful).
+  INFO [323e7fe5] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/framework/cache as forge@159.65.138.93
+ DEBUG [323e7fe5] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/framework/cache
+  INFO [323e7fe5] Finished in 0.863 seconds with exit status 0 (successful).
+  INFO [2d6c42c6] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/releases/20180219030608/storage/framework/cache as forge@159.65.138.93
+ DEBUG [2d6c42c6] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/cache /home/forge/capistrano/releases/20180219030608/storage/framework/cache
+  INFO [2d6c42c6] Finished in 0.526 seconds with exit status 0 (successful).
+ DEBUG [74aac09f] Running [ -L /home/forge/capistrano/releases/20180219030608/storage/framework/sessions ] as forge@159.65.138.93
+ DEBUG [74aac09f] Command: [ -L /home/forge/capistrano/releases/20180219030608/storage/framework/sessions ]
+ DEBUG [74aac09f] Finished in 0.759 seconds with exit status 1 (failed).
+ DEBUG [f05d1403] Running [ -d /home/forge/capistrano/releases/20180219030608/storage/framework/sessions ] as forge@159.65.138.93
+ DEBUG [f05d1403] Command: [ -d /home/forge/capistrano/releases/20180219030608/storage/framework/sessions ]
+ DEBUG [f05d1403] Finished in 0.923 seconds with exit status 0 (successful).
+  INFO [7d99915c] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/framework/sessions as forge@159.65.138.93
+ DEBUG [7d99915c] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/framework/sessions
+  INFO [7d99915c] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [c20e49d8] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/releases/20180219030608/storage/framework/sessions as forge@159.65.138.93
+ DEBUG [c20e49d8] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/sessions /home/forge/capistrano/releases/20180219030608/storage/framework/sessions
+  INFO [c20e49d8] Finished in 0.917 seconds with exit status 0 (successful).
+ DEBUG [3303cf7d] Running [ -L /home/forge/capistrano/releases/20180219030608/storage/framework/views ] as forge@159.65.138.93
+ DEBUG [3303cf7d] Command: [ -L /home/forge/capistrano/releases/20180219030608/storage/framework/views ]
+ DEBUG [3303cf7d] Finished in 0.925 seconds with exit status 1 (failed).
+ DEBUG [6b3a9b5d] Running [ -d /home/forge/capistrano/releases/20180219030608/storage/framework/views ] as forge@159.65.138.93
+ DEBUG [6b3a9b5d] Command: [ -d /home/forge/capistrano/releases/20180219030608/storage/framework/views ]
+ DEBUG [6b3a9b5d] Finished in 0.922 seconds with exit status 0 (successful).
+  INFO [37ae59ee] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/framework/views as forge@159.65.138.93
+ DEBUG [37ae59ee] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/framework/views
+  INFO [37ae59ee] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [d83fb468] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/releases/20180219030608/storage/framework/views as forge@159.65.138.93
+ DEBUG [d83fb468] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/framework/views /home/forge/capistrano/releases/20180219030608/storage/framework/views
+  INFO [d83fb468] Finished in 0.836 seconds with exit status 0 (successful).
+ DEBUG [eeac99e6] Running [ -L /home/forge/capistrano/releases/20180219030608/storage/logs ] as forge@159.65.138.93
+ DEBUG [eeac99e6] Command: [ -L /home/forge/capistrano/releases/20180219030608/storage/logs ]
+ DEBUG [eeac99e6] Finished in 0.857 seconds with exit status 1 (failed).
+ DEBUG [bfe055d5] Running [ -d /home/forge/capistrano/releases/20180219030608/storage/logs ] as forge@159.65.138.93
+ DEBUG [bfe055d5] Command: [ -d /home/forge/capistrano/releases/20180219030608/storage/logs ]
+ DEBUG [bfe055d5] Finished in 0.654 seconds with exit status 0 (successful).
+  INFO [cd4ce472] Running /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/logs as forge@159.65.138.93
+ DEBUG [cd4ce472] Command: /usr/bin/env rm -rf /home/forge/capistrano/releases/20180219030608/storage/logs
+  INFO [cd4ce472] Finished in 0.885 seconds with exit status 0 (successful).
+  INFO [2883cbc3] Running /usr/bin/env ln -s /home/forge/capistrano/shared/storage/logs /home/forge/capistrano/releases/20180219030608/storage/logs as forge@159.65.138.93
+ DEBUG [2883cbc3] Command: /usr/bin/env ln -s /home/forge/capistrano/shared/storage/logs /home/forge/capistrano/releases/20180219030608/storage/logs
+  INFO [2883cbc3] Finished in 0.773 seconds with exit status 0 (successful).
+ DEBUG [5661f555] Running if test ! -d /home/forge/capistrano/releases/20180219030608; then echo "Directory does not exist '/home/forge/capistrano/releases/20180219030608'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [5661f555] Command: if test ! -d /home/forge/capistrano/releases/20180219030608; then echo "Directory does not exist '/home/forge/capistrano/releases/20180219030608'" 1>&2; false; fi
+ DEBUG [5661f555] Finished in 0.906 seconds with exit status 0 (successful).
+  INFO [32b4c840] Running /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader as forge@159.65.138.93
+ DEBUG [32b4c840] Command: cd /home/forge/capistrano/releases/20180219030608 && /usr/bin/env composer install --no-dev --quiet --prefer-dist --optimize-autoloader
+  INFO [32b4c840] Finished in 7.988 seconds with exit status 0 (successful).
+  INFO [ba6cda1a] Running /usr/bin/env chmod -R ug+rwx /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180219030608/bootstrap/cache/ as forge@159.65.138.93
+ DEBUG [ba6cda1a] Command: /usr/bin/env chmod -R ug+rwx /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180219030608/bootstrap/cache/
+  INFO [ba6cda1a] Finished in 0.917 seconds with exit status 0 (successful).
+  INFO [8261bd5a] Running /usr/bin/env chgrp -R www-data /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180219030608/bootstrap/cache/ as forge@159.65.138.93
+ DEBUG [8261bd5a] Command: /usr/bin/env chgrp -R www-data /home/forge/capistrano/shared/storage/ /home/forge/capistrano/releases/20180219030608/bootstrap/cache/
+  INFO [8261bd5a] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [469388a3] Running /usr/bin/env ln -s /home/forge/capistrano/releases/20180219030608 /home/forge/capistrano/releases/current as forge@159.65.138.93
+ DEBUG [469388a3] Command: /usr/bin/env ln -s /home/forge/capistrano/releases/20180219030608 /home/forge/capistrano/releases/current
+  INFO [469388a3] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO [f4e6047e] Running /usr/bin/env mv /home/forge/capistrano/releases/current /home/forge/capistrano as forge@159.65.138.93
+ DEBUG [f4e6047e] Command: /usr/bin/env mv /home/forge/capistrano/releases/current /home/forge/capistrano
+  INFO [f4e6047e] Finished in 0.782 seconds with exit status 0 (successful).
+ DEBUG [9261ae18] Running /usr/bin/env ls -x /home/forge/capistrano/releases as forge@159.65.138.93
+ DEBUG [9261ae18] Command: /usr/bin/env ls -x /home/forge/capistrano/releases
+ DEBUG [9261ae18] 	20180218142551	20180219024652	20180219030608
+ DEBUG [9261ae18] Finished in 1.063 seconds with exit status 0 (successful).
+ DEBUG [0fd27580] Running if test ! -d /home/forge/capistrano/releases; then echo "Directory does not exist '/home/forge/capistrano/releases'" 1>&2; false; fi as forge@159.65.138.93
+ DEBUG [0fd27580] Command: if test ! -d /home/forge/capistrano/releases; then echo "Directory does not exist '/home/forge/capistrano/releases'" 1>&2; false; fi
+ DEBUG [0fd27580] Finished in 0.770 seconds with exit status 0 (successful).
+  INFO [ef47c4b8] Running /usr/bin/env echo "Branch master (at c2c821595f06f2fb94c3af284cdd2d2c8f787dd4) deployed as release 20180219030608 by korajayaram" >> /home/forge/capistrano/revisions.log as forge@159.65.138.93
+ DEBUG [ef47c4b8] Command: cd /home/forge/capistrano/releases && /usr/bin/env echo "Branch master (at c2c821595f06f2fb94c3af284cdd2d2c8f787dd4) deployed as release 20180219030608 by korajayaram" >> /home/forge/capistrano/revisions.log
+  INFO [ef47c4b8] Finished in 0.627 seconds with exit status 0 (successful).
