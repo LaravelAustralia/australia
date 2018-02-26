@@ -20,9 +20,8 @@ class JoinController extends Controller
             'emaild'    => 'required|email',
         ]);
 
-         dispatch(new UserHasRequestInvite($request->emaild, $request->firstName, $request->lastName));
+        dispatch(new UserHasRequestInvite($request->emaild, $request->firstName, $request->lastName));
 
-         return view('join.slack')->with(['invitedMessage'=>'An Email with invite will be sent to you shortly.']);
-
+        return view('join.slack')->with(['invitedMessage'=>'An Email with invite will be sent to you shortly.']);
     }
 }
